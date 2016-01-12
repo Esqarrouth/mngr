@@ -1,0 +1,6 @@
+framework module Pods_mngr {
+  umbrella header "Pods-mngr-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,25 @@
+PODS:
+  - EZAlertController (0.3)
+  - EZLoadingActivity (0.7)
+  - EZSwiftExtensions (1.0.5)
+  - EZSwipeController (0.4)
+  - QorumLogs (0.4)
+  - SwiftRandom (0.1.7)
+
+DEPENDENCIES:
+  - EZAlertController
+  - EZLoadingActivity
+  - EZSwiftExtensions
+  - EZSwipeController
+  - QorumLogs
+  - SwiftRandom
+
+SPEC CHECKSUMS:
+  EZAlertController: 178808422e5281c3ffb20c28cb3eb555088bf07e
+  EZLoadingActivity: d0450022cfcec79e079d037af922a728828f4b80
+  EZSwiftExtensions: b4369331aa7a0fcfca8bb7d2467567bcd237f083
+  EZSwipeController: 49aa0f869e66049ac433483120f458434272ee32
+  QorumLogs: 63d7bd4a3f59fa5f7afedafa3ab9202b065c6466
+  SwiftRandom: a03b68cbcda1b03d0fef5a1b87296f9500b6eac3
+
+COCOAPODS: 0.39.0
