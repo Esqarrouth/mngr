@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-mngr/EZSwipeController.framework"
   install_framework "Pods-mngr/QorumLogs.framework"
   install_framework "Pods-mngr/SwiftRandom.framework"
+  install_framework "Pods-mngr/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-mngr/EZAlertController.framework"
@@ -98,4 +99,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-mngr/EZSwipeController.framework"
   install_framework "Pods-mngr/QorumLogs.framework"
   install_framework "Pods-mngr/SwiftRandom.framework"
+  install_framework "Pods-mngr/SwiftyJSON.framework"
 fi

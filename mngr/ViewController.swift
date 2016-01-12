@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import EZSwiftExtensions
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        ez.requestJSON("asd", success: { (object) -> Void in
+            
+            
+            }) { (error) -> Void in
+                
+                
+        }
+        
+        
+    }
+    
+    func createViews() {
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
