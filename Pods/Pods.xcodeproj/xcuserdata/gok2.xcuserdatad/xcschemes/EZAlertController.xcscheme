@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '86CE1D4320C29139444B0516'
+               BlueprintIdentifier = 'BCFC670FF28C2784A6BA4CF7'
                BlueprintName = 'EZAlertController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'EZAlertController.framework'>

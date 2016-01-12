@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         
         createViews([testTask, testTask2])
 
+        //users.json
+        //tasks.json
+        //tasks.json?userid=
         ez.requestJSON("https://mngr-api.herokuapp.com/users.json", success: { (object) -> Void in
 //            print(object)
             
