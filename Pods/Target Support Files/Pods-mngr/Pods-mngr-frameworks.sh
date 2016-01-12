@@ -84,21 +84,21 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-mngr/ActionButton.framework"
   install_framework "Pods-mngr/EZAlertController.framework"
   install_framework "Pods-mngr/EZLoadingActivity.framework"
   install_framework "Pods-mngr/EZSwiftExtensions.framework"
   install_framework "Pods-mngr/EZSwipeController.framework"
-  install_framework "Pods-mngr/LiquidFloatingActionButton.framework"
   install_framework "Pods-mngr/QorumLogs.framework"
   install_framework "Pods-mngr/SwiftRandom.framework"
   install_framework "Pods-mngr/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-mngr/ActionButton.framework"
   install_framework "Pods-mngr/EZAlertController.framework"
   install_framework "Pods-mngr/EZLoadingActivity.framework"
   install_framework "Pods-mngr/EZSwiftExtensions.framework"
   install_framework "Pods-mngr/EZSwipeController.framework"
-  install_framework "Pods-mngr/LiquidFloatingActionButton.framework"
   install_framework "Pods-mngr/QorumLogs.framework"
   install_framework "Pods-mngr/SwiftRandom.framework"
   install_framework "Pods-mngr/SwiftyJSON.framework"

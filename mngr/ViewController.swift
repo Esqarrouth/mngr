@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         //tasks.json
         //tasks.json?userid=
         ez.requestJSON("https://mngr-api.herokuapp.com/users.json", success: { (object) -> Void in
-//            print(object)
+            print(object)
             
 //            [{"id":1,"name":"Brian","manager_id":3,"created_at":"2016-01-12T04:42:47.728Z","updated_at":"2016-01-12T04:42:47.728Z"},{"id":2,"name":"Goktug","manager_id":3,"created_at":"2016-01-12T04:43:02.075Z","updated_at":"2016-01-12T04:43:02.075Z"},{"id":3,"name":"Boss","manager_id":null,"created_at":"2016-01-12T04:43:10.994Z","updated_at":"2016-01-12T04:43:52.749Z"}]
             

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ActionButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,16 +25,6 @@
 			<false/>
 		</dict>
 		<key>EZSwipeController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>LiquidFloatingActionButton-LiquidFloatingActionButton.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>LiquidFloatingActionButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,17 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E112FE1F2562243B8DF44B25B02E018</key>
+		<key>70524A144DDA3D141D3F20AD61AB17B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E4A37C88D68A62EA5C1BC7A2A4D19AE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>423CC9BC3ACEEC122CA7568ADBFA022E</key>
+		<key>75F276928449401A05FA98224CC2B4D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,22 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BED4792B466573F9A5A8F75DD37E01E0</key>
+		<key>9293EFBDE62DB6F9A46D5FAE503E30FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ACF4C33012D96A4C02ED1543BD90F9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7AF6E763314D4D05792E29A5B9ABDE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D168A90FC275B7C8B0DDF59974BBE8BE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF58E76479A0E4563C78B7AC94DFBDC3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ECB4143196184B0E0EA02182DB2B9CCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

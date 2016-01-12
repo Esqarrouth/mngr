@@ -16,7 +16,7 @@ pod 'EZAlertController'
 pod 'SwiftRandom'
 pod 'QorumLogs'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-pod 'LiquidFloatingActionButton'
+pod 'ActionButton'
 
 
 
