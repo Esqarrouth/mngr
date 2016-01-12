@@ -10,7 +10,8 @@ import UIKit
 import EZSwiftExtensions
 import SwiftyJSON
 import SwiftRandom
-
+import ActionButton
+import QorumLogs
 var userName = ""
 
 struct Tasks {
@@ -29,22 +30,74 @@ class ViewController: UIViewController {
         let testTask2 = Tasks(text: "text of tas2k", completed: false, level: 3, assignedTo: "me")
 
         
-        createViews([testTask, testTask2])
+        
 
         //users.json
         //tasks.json
         //tasks.json?userid=
-        ez.requestJSON("https://mngr-api.herokuapp.com/users.json", success: { (object) -> Void in
-            print(object)
+        ez.requestJSON("https://mngr-api.herokuapp.com/tasks.json", success: { (object) -> Void in
+            let json = JSON(object!)
             
-//            [{"id":1,"name":"Brian","manager_id":3,"created_at":"2016-01-12T04:42:47.728Z","updated_at":"2016-01-12T04:42:47.728Z"},{"id":2,"name":"Goktug","manager_id":3,"created_at":"2016-01-12T04:43:02.075Z","updated_at":"2016-01-12T04:43:02.075Z"},{"id":3,"name":"Boss","manager_id":null,"created_at":"2016-01-12T04:43:10.994Z","updated_at":"2016-01-12T04:43:52.749Z"}]
+            var myTasks = [Tasks]()
+
+            var counter = 0
+            for subj in json {
+                let myTask = Tasks(text: json[counter]["body"].stringValue, completed: json[counter]["completed"].boolValue, level: json[counter]["priority"].intValue, assignedTo: "")
+                
+                myTasks.append(myTask)
+                
+                counter++
+            }
+            
+            ez.runThisInMainThread({ () -> Void in
+                self.createViews(myTasks)
+            })
+
+            QL2(object)
             
             }) { (error) -> Void in
                 
-                
+             QL4("some type of error")
         }
         
+
         
+        let myButton = BlockButton(x: ez.screenWidth - 50, y: ez.screenHeight - 50, w: 30, h: 30) { (sender) -> Void in
+
+//            ez.requestJSON("https://mngr-api.herokuapp.com/tasks.json?body=mybody&completed=false&priority=2", success: { (object) -> Void in
+//                QL2(555)
+//                
+//                
+//                }, error: { (error) -> Void in
+//                    
+//                  QL4("error")
+//            })
+
+            
+            let request = NSMutableURLRequest(URL: NSURL(string: "https://mngr-api.herokuapp.com/tasks.json")!)
+            request.HTTPMethod = "POST"
+            let postString = "task[user_id]=1&task[body]=mybody&task[completed]=false&task[priority]=2"
+            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+                guard error == nil && data != nil else {                                                          // check for fundamental networking error
+                    print("error=\(error)")
+                    return
+                }
+                
+                if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
+                    print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                    print("response = \(response)")
+                }
+                
+                let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                print("responseString = \(responseString)")
+            }
+            task.resume()
+
+        
+        }
+        myButton.backgroundColor = UIColor.redColor()
+        view.addSubview(myButton)
     }
     
     func createViews(taskList: [Tasks]) {

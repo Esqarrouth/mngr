@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QorumLogs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        QorumLogs.enabled = true
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window!.rootViewController = ViewController()
         window!.backgroundColor = UIColor.whiteColor()
